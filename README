@@ -1,0 +1,32 @@
+webMathEditor is a javascript addon, that enables seamless interactivity of MathML markup. 
+
+Features:
+1) Recognizing mouseclicks and rendering a mockup of a blinking cursor
+2) Accepting typed input: space letters, simple arithmetic operations ([+]/[-]/[*]/[/]/[^])
+3) Backspace erases complete templates
+4) Keyborad navigation with left and right arrow keys
+
+TODO
+1) Complete keyboard navigation with [Enter]/[Tab]/[Arrows]/[Ctrl-Arrows][Shift-Tab]/[Ctrl-Enter] etc
+2) Introduce customizable shortcuts, e.g. [Ctrl-2] for square root
+3) Template insertion with GUI buttons, customizable buttons
+4) Customizable list of recognizabl functions, e.g. sin cos tan exp log etc
+5) May be accept LaTEX commands, such as \frac \sqrt etc 
+
+License:
+--------
+    mathWebEdit (R :-) JavaScript MathML based Equation Editor
+    Copyright (C) 2012  Evgeny Savelev
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
