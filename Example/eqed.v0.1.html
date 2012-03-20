@@ -1,0 +1,2616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+body{
+	background-color:#eeffee;
+	font-size:18px;
+}
+
+h3
+{
+	margin:0;
+}
+
+.testpage
+{
+	min-width:800px;
+}
+
+.testpage p.menu
+{
+	color:#227722;
+}
+
+.aleft
+{
+	margin-left:80%;
+	text-align:right;
+}
+
+.testpage a:hover
+{
+	color:#efffef;
+	background-color:#aaddaa;
+}
+
+.testpage a
+{
+	padding:4px;
+}
+
+.problem
+{
+	width:38%;
+	margin:0 0 59% 0;
+	padding:0;
+	float:left;
+}
+
+.questions
+{
+	width:59%;
+	margin:0;
+	padding:0;
+	float:right;
+}
+
+.diveditorheading
+{
+	color:#efffef;
+	margin-bottom:0px;
+	background-color:#aaddaa;
+	padding:2px 1em 2px;
+	width:90%;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:2px 2px 0px;
+}
+
+.diveditor
+{
+	margin-top:0px;
+	margin-bottom:20px;
+	background-color:#ffffff;
+	padding:1em;
+	width:90%;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:0px 2px 2px;
+	box-shadow: 1px 1px 4px 1px #cccccc inset;
+}
+
+.divproblemstatementheading
+{
+	color:#eeffee;
+	margin-bottom:0px;
+	background-color:#aaddaa;
+	padding:2px 1em 2px;
+	width:90%;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:2px 2px 0px;
+	box-shadow: 1px 1px 4px 1px #cccccc;
+}
+
+.divproblemstatement
+{
+	background-color:#ffffff;
+	margin-top:0px;
+	padding:1em;
+	width:90%;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:0px 2px 2px;
+	box-shadow: 1px 1px 4px 1px #cccccc;
+	min-height:600px;
+}
+
+div#help
+{
+	background-color:#DEFFB0;
+	margin-top:10px;
+	padding:2px 1em 2px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:4px;
+	box-shadow: 1px 1px 4px 1px #cccccc;
+	max-height:1em;
+	max-width:150px;
+	overflow:hidden;
+	position:fixed;
+	bottom:5px;
+	right:5px;
+}
+
+div#help:hover
+{
+	background-color:#DEFFB0;
+	margin-top:10px;
+	padding:2px 1em 2px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	border-style:solid;
+	border-color:#aaccaa;
+	border-width:4px;
+	box-shadow: 1px 1px 4px 1px #cccccc;
+	min-height:2em !important;
+	max-width:500px;
+	max-height:600px !important;
+	overflow:auto;
+}
+
+div#help li
+{
+	line-height:1.3;
+}
+span.boxed
+{
+	margin:1px 3px 1px;
+	border:1px solid black;
+	padding: 2px;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+/*******************   Math Styles   *****************/
+/*******************    Debugging    *****************/
+/*
+math.answerform mrow
+{
+	border:1px solid #e0e0e0;
+}
+*/
+/****************   Normal Math Styles   *************/
+
+.mathformula
+{
+	margin-top:.1em;
+	text-indent:3em;
+}
+
+math
+{
+ font-family: STIXGeneral,Cambria,Times,'Times New Roman','Cambria Math',serif;
+ font-size:18px !important;
+}
+
+math .selectable
+{
+	color: black;
+	cursor:text;
+}
+
+math.answerform
+{
+	padding:4px;
+	text-align:left;
+	text-indent:1em;
+	font-family: STIXGeneral,Cambria,Times,'Times New Roman','Cambria Math',serif;
+	font-size:133% !important;
+	color:#330033;
+	border:1px solid #cccccc;
+	cursor:default;
+/* 	box-shadow: 1px 1px 4px 1px #cccccc inset;*/
+}
+/*math[display="block"]{text-align:left;}*/
+
+/* Highlighting of MathML elements */
+/*math .selectable:hover{
+ color:#00f;
+ cursor:default;
+ background-color:#a0a0ff;
+ border:1px dotted #000000;
+}*/
+
+math .selected
+{
+	background-color:#ffffff;
+	box-shadow: 0px 0px 4px 1px #ff77ff;
+/*	border:1px dotted #000000;*/
+}
+
+math .empty
+{
+	border:1px dotted #000000 !important;
+}
+
+math .greyedout
+{
+	color:#777777;
+}
+
+math mrow.functionname mi
+{
+	font-style:normal;
+}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+var EXTRACTNODE=true;
+
+var mathMLnamespace="http://www.w3.org/1998/Math/MathML";
+var mathBlinkingOn=false,mathBlinkingTimer,
+	mathBlinkingObj=
+	{
+		obj:null,
+		side:null,
+		selectedMrow:null
+	};
+var greyedOutElements = //insert a greyed out element
+	{
+		inputRequired: "?", //if an operation is not followed by an operand
+		times		:	String.fromCharCode(0xD7),	//Cross between two numbers
+	//	times		:	String.fromCharCode(0xB7),	//Middle dot
+		leadingDot	:	"0",	//put a greyed out zero in front of a dot
+		trailingDot	:	"0"	,	//put a greyed out zero after a dot
+		argumentRequired : "?" //if a <functionname mrow> is not followed by <functionargument mrow>
+	}
+	
+var joinableTags=["mn","mi"];//tags to join in homogeneous rows
+var functionsRecognized = ["sinh","sin","asin","arcsin"];//sequences of <mi> elements to be converted into <functionname mrow>
+
+function setUpSelectables()
+//This function scans the page for editable MathML sections and call a processor on them. TODO change the search from by ID to by class-name
+{
+	var editableMathList=document.getElementsByClassName('editablemath');
+	
+	for (var i=0;i<editableMathList.length;i++)
+	{
+		processDescendants(editableMathList[i],0);	
+	}
+}
+
+function mathOnMouseMove(evt)
+{
+	var obj = evt.target,stylestring=obj.getAttribute('style');
+	var XPos = evt.clientX;
+	var YPos = evt.clientY;
+   
+	var objRect = obj.getBoundingClientRect();
+	var objTop = Math.round(objRect.top),
+		objLeft = Math.round(objRect.left),
+		objWidth = obj.scrollWidth,
+		objHeight = obj.scrollHeight;
+
+	if (stylestring!=null)
+	{
+		var parentBlink=/blink-*parent/.test(stylestring),
+			blinkLeftOnly=/blink-*\w*-*left/.test(stylestring),
+			blinkRightOnly=/blink-*\w*-*right/.test(stylestring);
+			
+		//**********************************************DO NOW insert the code of finding the right item to blink	
+			
+		obj.removeAttribute('style');
+
+		if (((XPos-objLeft)/objWidth)>1/2)
+		{
+			obj.setAttribute('style',stylestring.replace(/border.*[^;];/,"")+"border-right: 1px solid black ;");
+		}
+		else
+		{
+			obj.setAttribute('style',stylestring.replace(/border.*[^;];/,"")+"border-left: 1px solid black ;");
+		}
+	}
+	else
+	{
+		if (((XPos-objLeft)/objWidth)>1/2)
+		{
+			obj.setAttribute('style',"border-right: 1px solid black ;");
+		}
+		else
+		{
+			obj.setAttribute('style',"border-left: 1px solid black ;");
+		}
+	}
+	
+}
+function mathOnMouseOut(evt)
+{
+	var obj = evt.target,stylestring=obj.getAttribute('style');
+	
+	if (stylestring!=null)
+	{
+		obj.removeAttribute('style');
+		obj.setAttribute('style',stylestring.replace(/background-color\s*:(.*)\s*;/,"background-color:transparent ;").replace(/border.*[^;];/,""));
+	}
+}
+function mathOnMouseClick(evt)
+{
+	var obj = evt.target;
+						
+	var XPos = evt.clientX;
+	var YPos = evt.clientY;
+   
+	var objRect = obj.getBoundingClientRect();
+	var objTop = Math.round(objRect.top),
+		objLeft = Math.round(objRect.left),
+		objWidth = obj.scrollWidth,
+		objHeight = obj.scrollHeight;
+		
+	var selectedNode;
+
+
+	if (((XPos-objLeft)/objWidth)>1/2)
+	{
+		if (obj.nodeName==="mrow")
+		{
+			selectedNode=obj;
+			var child =obj.lastElementChild;
+			mathBlinkSetUp(child,"right",selectedNode);
+		}
+		else
+		{
+			selectedNode=findParentMRow(obj);
+			if (selectedNode!=null) mathBlinkSetUp(obj,"right",selectedNode);
+		}
+	}
+	else
+	{
+		if (obj.nodeName==="mrow")
+		{
+			selectedNode=obj;
+			var child =obj.firstElementChild;
+			mathBlinkSetUp(child,"left",selectedNode);
+		}
+		else
+		{
+			selectedNode=findParentMRow(obj);
+			if (selectedNode!=null) mathBlinkSetUp(obj,"left",selectedNode);
+		}
+	}
+}
+
+function processDescendants(root,deep)
+{
+	var children=root.childNodes,item,classname;
+	
+	for (var i=0;i<children.length;i++)
+	{
+		item=children[i];
+		
+		if (item.getAttribute)
+		{
+			classname =item.getAttribute('class');
+			if(classname!=null)
+			{
+				if((item.nodeName==="mrow")&&(classname.indexOf("selectable")>-1))
+				{
+					item.addEventListener("mousemove",mathOnMouseMove,false);
+					
+					item.addEventListener("mouseout",mathOnMouseOut,false);
+					
+					item.addEventListener("click",mathOnMouseClick,false);
+				}
+			}
+		}
+		
+		if (item.nodeType===1) {processDescendants(item,deep+1);}
+	}
+}
+
+function findNextSelectable(start)
+{
+	var currentNode=start.nextElementSibling,parentSearch=false;
+	
+	if (currentNode===null) 
+	{
+		currentNode=start.parentNode;
+		parentSearch=true;
+	}
+	
+	while (currentNode.nodeName!="math")
+	{
+		if ((currentNode.nodeName=="mrow")&&(/selectable/.test(currentNode.getAttribute('class'))))
+		{//We found a selectable <mrow>
+			if (currentNode.childElementCount<1)//Something wrong happened. This row is never supposed to be empty
+			{
+				insertEmptyElement(currentNode);
+			}
+			return currentNode;
+		}
+		else
+		{
+			if(parentSearch)
+			{
+				if (currentNode.nextElementSibling!=null)
+				{
+					currentNode=currentNode.nextElementSibling;
+					parentSearch=false;
+				}
+				else 
+				{
+					currentNode=currentNode.parentNode;
+				}
+			}
+			else if(currentNode.firstElementChild!=null)
+			{
+				currentNode=currentNode.firstElementChild;
+			}
+			else if (currentNode.nextElementSibling!=null)
+			{
+				currentNode=currentNode.nextElementSibling;
+			}
+			else 
+			{
+				currentNode=currentNode.parentNode;
+				parentSearch=true;
+			}
+		}
+	}
+	
+	return null;
+}
+
+function findLeveledNextSelectable(start)
+{
+	var currentNode=start.nextElementSibling,parentSearch=false,depth=1;
+	
+	if (currentNode===null) 
+	{
+		return null;
+	}
+	
+	while (depth>0)
+	{
+		if ((currentNode.nodeName=="mrow")&&(/selectable/.test(currentNode.getAttribute('class'))))
+		{//We found a selectable <mrow>
+			if (currentNode.childElementCount<1)//Something wrong happened. This row is never supposed to be empty
+			{
+				insertEmptyElement(currentNode);
+			}
+			return currentNode;
+		}
+		else
+		{
+			if(parentSearch)
+			{
+				if (currentNode.nextElementSibling!=null)
+				{
+					currentNode=currentNode.nextElementSibling;
+					parentSearch=false;
+				}
+				else 
+				{
+					currentNode=currentNode.parentNode;
+					depth--;
+				}
+			}
+			else if(currentNode.firstElementChild!=null)
+			{
+				currentNode=currentNode.firstElementChild;
+				depth++;
+			}
+			else if (currentNode.nextElementSibling!=null)
+			{
+				currentNode=currentNode.nextElementSibling;
+			}
+			else 
+			{
+				currentNode=currentNode.parentNode;
+				depth--;
+				parentSearch=true;
+			}
+		}
+	}
+	
+	return null;
+}
+
+function findPreviousSelectable(start)
+{
+	var currentNode=start.previousElementSibling,parentSearch=false;
+	
+	if (currentNode===null) 
+	{
+		currentNode=start.parentNode;
+		parentSearch=true;
+	}
+	
+	while (currentNode.nodeName!="math")
+	{
+		if ((currentNode.nodeName=="mrow")&&(/selectable/.test(currentNode.getAttribute('class'))))
+		{//We found a selectable <mrow>
+			if (currentNode.childElementCount<1)//Something wrong happened. This row is never supposed to be empty
+			{
+				insertEmptyElement(currentNode);
+			}
+			return currentNode;
+		}
+		else
+		{
+			if(parentSearch)
+			{
+				if (currentNode.previousElementSibling!=null)
+				{
+					currentNode=currentNode.previousElementSibling;
+					parentSearch=false;
+				}
+				else 
+				{
+					currentNode=currentNode.parentNode;
+				}
+			}
+			else if(currentNode.lastElementChild!=null)
+			{
+				currentNode=currentNode.lastElementChild;
+			}
+			else if (currentNode.previousElementSibling!=null)
+			{
+				currentNode=currentNode.previousElementSibling;
+			}
+			else 
+			{
+				currentNode=currentNode.parentNode;
+				parentSearch=true;
+			}
+		}
+	}
+	
+	return null;
+}
+
+function findLeveledPreviousSelectable(start)
+{
+	var currentNode=start.previousElementSibling,parentSearch=false,depth=1;
+	
+	if (currentNode===null) 
+	{
+		return null;
+	}
+	
+	while (depth>0)
+	{
+		if ((currentNode.nodeName=="mrow")&&(/selectable/.test(currentNode.getAttribute('class'))))
+		{//We found a selectable <mrow>
+			if (currentNode.childElementCount<1)//Something wrong happened. This row is never supposed to be empty
+			{
+				insertEmptyElement(currentNode);
+			}
+			return currentNode;
+		}
+		else
+		{
+			if(parentSearch)
+			{
+				if (currentNode.previousElementSibling!=null)
+				{
+					currentNode=currentNode.previousElementSibling;
+					parentSearch=false;
+				}
+				else 
+				{
+					currentNode=currentNode.parentNode;
+					depth--;
+				}
+			}
+			else if(currentNode.lastElementChild!=null)
+			{
+				currentNode=currentNode.lastElementChild;
+				depth++;
+			}
+			else if (currentNode.previousElementSibling!=null)
+			{
+				currentNode=currentNode.previousElementSibling;
+			}
+			else 
+			{
+				currentNode=currentNode.parentNode;
+				depth--;
+				parentSearch=true;
+			}
+		}
+	}
+	
+	return null;
+}
+
+function findParentMRow(node)
+{
+	for(var pnode=node.parentNode;((pnode!=null)&&(pnode.namespaceURI.indexOf("MathML") > -1));pnode=pnode.parentNode)
+	{
+		if ((pnode.nodeName==="mrow")&&(/selectable/.test(pnode.getAttribute('class')))) return pnode;
+	}
+	return null;
+}
+
+function getMathRoot(node)
+{
+	for(var pnode=node.parentNode;(pnode.namespaceURI.indexOf("MathML") > -1);pnode=pnode.parentNode)
+	{
+		if ((pnode.nodeName==="math")&&(/answerform/.test(pnode.getAttribute('class')))) return pnode;
+	}
+	return null;
+}
+
+function insertGreyedTimes(beforenode)
+{
+//	<mpadded voffset="+.4em"> <mo class="greyedout" style="font-size:0.5em;	vertical-align:.8em !important;line-height:1.3em !important;"> x </mo></mpadded>
+	var newMPaddingNode=document.createElementNS(mathMLnamespace,"mpadding"),
+		newGreyedNode=document.createElementNS(mathMLnamespace,"mo"),
+		newTextNode = document.createTextNode(greyedOutElements.times);
+
+	newMPaddingNode.setAttribute('class',"greyedout single");//This <mpadded> will shift the times element
+	newGreyedNode.setAttribute('class',"greyedout");//This <mo> will show greyed out
+	newGreyedNode.setAttribute('style',"font-size:0.5em;vertical-align:.4em !important;line-height:1.3em !important;");//Adjust the size and veritcal shift
+	newGreyedNode.appendChild(newTextNode);
+	newMPaddingNode.appendChild(newGreyedNode);
+	
+	beforenode.parentNode.insertBefore(newMPaddingNode,beforenode);
+}
+
+
+function setupEventListeners() {
+	setUpSelectables();
+	
+	document.addEventListener('keyup',processKeyUp,false);
+	document.addEventListener('keydown',processKeyDown,false);
+	document.addEventListener('keypress',processKeyPress,false);
+
+	document.addEventListener('click',clickListener,true);
+}
+
+function processKeyUp(evt)
+{
+	if((mathBlinkingOn)&&(mathBlinkingObj.obj!=null)) //If there is a clicked math object
+	{
+		if (mathBlinkingObj.obj.namespaceURI.indexOf("MathML") > -1)//Just paranoid here
+		{
+			var obj=mathBlinkingObj.obj, 
+				objParent=obj.parentNode;
+				
+			if(!((evt.ctrlKey)||(evt.altKey)||(evt.metaKey)))//Let the browsers deal with keystrokes
+			{
+			
+			// Some book keeping needs to be done. Sequences of digits have to be put into mrows
+			// Functions need to be recognized at this step
+				if (/selectable/.test(objParent.getAttribute('class')))
+				{
+					breakAndJoinMRows(objParent)
+				}
+				else
+				{
+					breakAndJoinMRows(findParentMRow(objParent))
+				}
+				
+				if (evt. preventDefault) evt.preventDefault();
+			}
+		}
+	}
+}
+
+function processKeyDown(evt)
+//This function processes non-characted input, such as arrows pressed, backspace etc
+{
+	if((mathBlinkingOn)&&(mathBlinkingObj.obj!=null)) //If there is a clicked math object
+	{
+		if (mathBlinkingObj.obj.namespaceURI.indexOf("MathML") > -1)//Just paranoid here
+		{
+			var obj=mathBlinkingObj.obj, 
+				objParent=obj.parentNode, 
+				code=evt.keyCode,//which button was pressed
+				emptyContainerCheck=false;//If this is true, then we just altered an empty placeholder
+			
+			if(!((evt.ctrlKey)||(evt.altKey)||(evt.metaKey)))//Let the browsers deal with keystrokes
+			{
+				var targetSibling=obj; //This is the object that has cursor
+				
+				if (code==8) //Backspace. TODO: Highlight complex objects before deletion, handle msup/msub nodes sequentially
+				{
+					if (!(/empty/.test(objParent.getAttribute('class')))) //Don't do anything if we are empty already
+					{
+						if (mathBlinkingObj.side==="left")//Delete previous sibling
+						{
+							if (targetSibling.previousElementSibling!=null)
+							{//there is something to delete
+								removeLast(targetSibling.previousElementSibling,false,false);
+							}
+							else
+							{//there is nothing to delete at the current level. Do nothing for now. TODO move to previous selectable and start deleting there
+								while ((objParent.previousElementSibling==null)&&(!(/selectable/.test(objParent.getAttribute('class')))))
+								{
+									objParent=objParent.parentNode;
+								}
+								if (objParent.previousElementSibling)
+								{
+									removeLast(objParent.previousElementSibling,false,false);
+								}
+							}
+						}
+						else//Delete the cursor holding object, check if we become empty
+						/*{
+							var previousTargetSibling=obj.previousElementSibling;
+							
+							if (previousTargetSibling!=null)
+							{
+								mathBlinkSetUp(previousTargetSibling,"right",null);
+								objParent.removeChild(targetSibling);
+							}
+							else
+							{
+								var nextTargetSibling=obj.nextElementSibling;
+								if (nextTargetSibling!=null)
+								{
+									mathBlinkSetUp(nextTargetSibling,"left",null);
+									objParent.removeChild(targetSibling);
+								}
+								else //targetSibling is the only existing child, we are empty after deletion
+								{
+									if (/selectable/.test(objParent.getAttribute('class')))
+									{
+										var	newMPhantom=document.createElementNS(mathMLnamespace,"mphantom"),
+											newTextNode = document.createTextNode("X");
+											
+										classstring = objParent.getAttribute('class');
+										
+										if (classstring!=null)
+										{
+											objParent.setAttribute('class',classstring + " empty");
+										}
+										else
+										{
+											objParent.setAttribute('class',"empty");
+										}
+										
+										newMPhantom.appendChild(newTextNode);
+										objParent.appendChild(newMPhantom);
+										objParent.removeChild(targetSibling);
+										mathBlinkSetUp(newMPhantom,"left",null);
+									}
+									else //target's parent is a grouping item. Delete it and drop focus. TODO move focus to upper elements
+									{
+										targetSibling=objParent;
+										objParent=objParent.parentNode;
+										objParent.removeChild(targetSibling);
+										
+										objParent=mathBlinkingObj.selectedMrow;
+										targetSibling=objParent.lastElementChild;
+										if(targetSibling==null)
+										{
+											insertEmptyElement(objParent);
+											targetSibling=objParent.lastElementChild;
+										}
+										mathBlinkSetUp(targetSibling,"right",null);
+									}
+								}
+							}
+						}*/
+						{
+							removeLast(targetSibling,true,false);
+						}
+					}
+				}
+				else if (code==39) //Right arrow. TODO: process arrows with modifiers, like [shift] + [->] or [Ctrl] + [->]
+				{
+					if (mathBlinkingObj.side==="left")//Element blinks on the left, move blinking to the right if a simple object. If not, move inside
+					{
+						focusInFromLeft(obj,true);
+					}
+					else //Element blinks on the right, move blinking to the nextSibling make it blink on the right
+					{
+						focusOutToRight(obj);
+					}
+				}
+				else if (code==37) //Left arrow. TODO: process arrows with modifiers, like [shift] + [<-] or [Ctrl] + [<-]
+				{
+					if (mathBlinkingObj.side==="right")//Element blinks on the right, move blinking to the left if a simple object. If not, move inside
+					{
+						focusInFromRight(obj,true);
+					}
+					else //Element blinks on the left, move blinking to the previousSibling make it blink on the left
+					{
+						focusOutToLeft(obj);
+					}
+				}
+				
+				if (evt. preventDefault) evt.preventDefault();
+			}
+		}
+	}
+}
+
+function removeEmptyElement(targetParent)
+{
+	var MPhantom=targetParent.firstElementChild;
+	while (MPhantom!=null) 
+	{
+		if(MPhantom.nodeName=="mphantom")
+		{
+			targetParent.removeChild(MPhantom);
+			break;
+		}
+		MPhantom=MPhantom.nextElementSibling;
+	}
+}
+
+function createEmptyElement()
+{
+	var newMRow=document.createElementNS(mathMLnamespace,"mrow"),//Create a set of objects that will represent an empty placeholder
+		newMPhantom=document.createElementNS(mathMLnamespace,"mphantom"),
+		newTextNode = document.createTextNode("X");
+	
+	newMRow.setAttribute('class',"selectable empty")
+	
+	newMPhantom.appendChild(newTextNode);
+	newMRow.appendChild(newMPhantom);
+	
+	return newMRow;
+}
+
+function insertEmptyElement(targetParent)
+{
+	var newMPhantom=document.createElementNS(mathMLnamespace,"mphantom"),//Create a set of objects that will represent an empty placeholder
+		newTextNode = document.createTextNode("X");
+	
+	var classstring = targetParent.getAttribute('class'); 
+	if (classstring==null) classstring="";
+	if (!(/empty/.test(classstring))) targetParent.setAttribute('class',classstring + " empty");
+	
+	newMPhantom.appendChild(newTextNode);
+	targetParent.appendChild(newMPhantom);
+}
+
+function getMathElementsByClassName(root,classselector)
+{
+	var elementList=[],patt=RegExp(classselector);
+	var children=root.children,item,classname;
+	var subList;
+	
+	for (var i=0;i<children.length;i++)
+	{
+		item=children[i];
+		
+		if (item.getAttribute)
+		{
+			classname =item.getAttribute('class');
+			if(patt.test(classname))
+			{
+				elementList.push(item);
+			}
+		}
+		
+		if (item.childElementCount>0) 
+		{
+			subList=getMathElementsByClassName(item,classselector);
+		
+			for (var j=0;j<subList.length;j++) 
+			{
+				elementList.push(subList[j]);
+			}
+		}
+	}
+	return elementList;
+}
+
+function getMathElementsByTagName(root,tagselector)
+{
+	var elementList=[],patt=RegExp(tagselector);
+	var children=root.children,item,tagname;
+	var subList;
+	
+	for (var i=0;i<children.length;i++)
+	{
+		item=children[i];
+		
+		if (item.getAttribute)
+		{
+			tagname =item.nodeName;
+			if(patt.test(tagname))
+			{
+				elementList.push(item);
+			}
+		}
+		
+		if (item.childElementCount>0) 
+		{
+			subList = getMathElementsByTagName(item,tagselector);
+		
+			for (var j=0;j<subList.length;j++) 
+			{
+				elementList.push(subList[j]);
+			}
+		}
+	}
+	return elementList;
+}
+
+function wrapElementsInMRows(root,tagname)
+{
+	var elementlist=getMathElementsByTagName(root,tagname),item,
+		patt = new RegExp('homogeneous'+tagname+'row'),
+		isTag = new RegExp(tagname);
+	
+	for (var i=0;i<elementlist.length;i++)
+	{
+		item = elementlist[i];
+		
+		if (patt.test(item.parentNode.getAttribute('class')))
+		{
+			item = item.parentNode;
+			while((item.nextElementSibling)&&(isTag.test(item.nextElementSibling.nodeName)))
+			{
+				item.appendChild(item.nextElementSibling);
+			}
+		}
+		else //create an <mrow> and put numbers in it.
+		{
+			var newhomogeneousmnrow=document.createElementNS(mathMLnamespace,"mrow");
+			
+			newhomogeneousmnrow.setAttribute('class','homogeneous'+tagname+'row');
+
+			item.parentNode.insertBefore(newhomogeneousmnrow,item);
+			newhomogeneousmnrow.appendChild(item);
+			item = item.parentNode;
+			while((item.nextElementSibling)&&(/mn/.test(item.nextElementSibling.nodeName)))
+			{
+				item.appendChild(item.nextElementSibling);
+			}
+		}
+		
+	}
+}
+
+
+function joinMRows(root,classname)
+{
+	var	mrowlist=getMathElementsByClassName(root,classname),item,
+		patt= new RegExp(classname);
+	
+	for (var i=0;i<mrowlist.length;i++)
+	{
+		item = mrowlist[i];
+		if (item.nextElementSibling)
+		{
+			if (patt.test(item.nextElementSibling.getAttribute('class')))
+			{
+				var sourceMRow=item.nextElementSibling;
+				
+				for (var j=0;j<sourceMRow.childElementCount;i++)
+				{
+					item.appendChild(sourceMRow.children[j]);
+				}
+				sourceMRow.parentNode.removeChild(sourceMRow);
+				
+				return;
+			}
+		}
+	}
+}
+
+function analyzeMRow(mrowNode)
+{
+	var elementName,classname=mrowNode.getAttribute('class'),
+		childElements=mrowNode.children;
+	
+	if ((classname!=null)&&(/homogeneous\w*row/.test(classname)))
+	{
+		elementName = classname.replace(/^.*homogeneous/,"").replace(/row.*$/,"")
+		
+		for (var i=0;i<mrowNode.childElementCount;i++)
+		{
+			if (childElements[i].nodeName!=elementName)
+			{
+				breakMRow(childElements[i],EXTRACTNODE);
+				i=-1;
+			}
+		}
+		if (mrowNode.childElementCount<1)
+		{//Zap an empty <homogeneous mrow>
+			mrowNode.parentNode.removeChild(mrowNode);
+		}
+	}
+}
+
+function wrapAmbiguousFormsInParenthesis(root)
+{
+	var rowslist=getMathElementsByTagName(root,"mrow"),parentname;
+	
+	for (var i=0;i<rowslist.length;i++)// Wrapping
+	{
+		var row=rowslist[i], parentnode=row.parentNode;
+		parentname=parentnode.nodeName;
+		
+		if(parentname=="msup") 
+		{//A row is in one of those. Check if it is a firstElemtnChild
+			if (row==parentnode.firstElementChild)
+			{//It is a first elemnt, chick if it is complex
+				if ((row.childElementCount>1)||(/(mfrac|msup|msubsup)/.test(row.firstElementChild.nodeName)))
+				{//Wrap in greyed out parenthesis
+					var newMFenced=document.createElementNS(mathMLnamespace,"mfenced");
+					
+					newMFenced.setAttribute('class',"greyedout");
+					newMFenced.setAttribute('open',"(");
+					newMFenced.setAttribute('close',")");
+					
+					parentnode.insertBefore(newMFenced,row);
+					newMFenced.appendChild(row);
+				}
+			}
+		}
+		else if ((parentname=="mfenced")&&(/greyedout/.test(parentnode.getAttribute('class'))))
+		{
+			if (row==parentnode.firstElementChild)
+			{//It is a first elemnt, chick if it is complex
+				if ((row.childElementCount<2)&&(!(/(mfrac|msup|msubsup)/.test(row.firstElementChild.nodeName))))
+				{//Remove greyed out parenthesis
+					var topparent=parentnode.parentNode;
+					
+					topparent.insertBefore(row,parentnode);
+					topparent.removeChild(parentnode);
+				}
+			}
+
+		}
+	}	
+}
+
+function insertGreyedElements(root)
+{
+	var mspaceList=getMathElementsByTagName(root,"mspace");
+	var grayedList=getMathElementsByClassName(root,"single");
+	var dotList=getMathElementsByClassName(root,"decimaldot");
+	
+	var mspace;
+	
+	for (var i=0;i<mspaceList.length;i++)// Converting spaces into greyed out <times>
+	{
+		mspace=mspaceList[i];
+		
+		if(mspace.nextElementSibling)
+			if(mspace.previousElementSibling)
+				if (((/homogeneous\w*row/.test(mspace.nextElementSibling.getAttribute('class')))||(mspace.nextElementSibling.nodeName=="mn"))&&
+						((/homogeneous\w*row/.test(mspace.previousElementSibling.getAttribute('class')))||(mspace.previousElementSibling.nodeName=="mn")))
+				{//Convert
+					insertGreyedTimes(mspace);
+					
+					if(mathBlinkingObj.obj==mspace)
+					{//This space had focus on it
+						if(mathBlinkingObj.side=="left")
+						{
+							mathBlinkSetUp(mspace.previousElementSibling,"right",null);
+						}
+						else
+						{
+							mathBlinkSetUp(mspace.nextElementSibling,"left",null);
+						}
+					}
+					
+					mspace.parentNode.removeChild(mspace);
+				}
+	}
+	
+	for (var i=0;i<grayedList.length;i++)// check to see if we still need greyed out <times>
+	{
+		mspace=grayedList[i];
+		
+		if ((mspace.nextElementSibling==null)||(mspace.nextElementSibling==null)||(!((/homogeneous\w*row/.test(mspace.nextElementSibling.getAttribute('class')))||(mspace.nextElementSibling.nodeName=="mn")))||(!((/homogeneous\w*row/.test(mspace.previousElementSibling.getAttribute('class')))||(mspace.previousElementSibling.nodeName=="mn"))))
+		{
+			var template = {preformatted:false,nodename:"mspace",textdata:"",nodeattributes:[["width","mediummathspace"]]};
+			addLeft(mspace,template);
+			
+			mspace.parentNode.removeChild(mspace);
+		}
+	}
+	
+}
+
+function breakAndJoinMRows(root)
+{
+	var rowslist=getMathElementsByTagName(root,"mrow"),item,classname,tagname,
+		blinkobj = mathBlinkingObj.obj,blinkside = mathBlinkingObj.side,blinkrow = mathBlinkingObj.selectedMrow;
+		
+	mathStopBlinking();// turn blinking temporarily off;
+	
+	for (var i=0;i<rowslist.length;i++)// Breaking stage
+	{
+		classname=rowslist[i].getAttribute('class');
+		
+		if(/selectable/.test(classname)) 
+		{
+			//Do nothing. We want to exclude these from being joined
+		}
+		else if (/functionname/.test(classname))
+		{
+			//Analyze if the function names are still intact
+		}
+		else if (/homogeneous\w*row/.test(classname))
+		{
+			//This is a container <mrow> that is supposed to hold atomic items of the same kind
+			analyzeMRow(rowslist[i]);
+		}
+	}
+	
+	wrapElementsInMRows(root,"mn") //Wrapping stage
+	
+	for (var i=0;i<joinableTags.length;i++)//Joining stage
+	{
+		tagname=joinableTags[i];
+		classname='homogeneous'+tagname+'row';
+		joinMRows(root,classname);
+	}
+	
+	wrapAmbiguousFormsInParenthesis(root.parentNode); //If there is a complex object with operation applied to it, wrap it in parenthesis.
+	
+	insertGreyedElements(root.parentNode);
+	
+	mathResumeBlinking();
+}
+
+function breakMRow(atNode,separate)
+{
+	if(atNode!=null)
+	{
+		var newNode=document.createElementNS(mathMLnamespace,"mrow");//create a new container mrow
+		var	objParent=atNode.parentNode;	
+		
+		newNode.setAttribute('class', atNode.parentNode.getAttribute('class'));//This mrow will contain specific atomic elements only.
+	
+		for (var node=atNode.previousElementSibling;node!=null;node=atNode.previousElementSibling)//Go through all siblings that are to the left and move them to the newly created mrow
+		{
+			newNode.insertBefore(node,newNode.firstChild);
+		}
+		if (separate)
+		{
+			objParent.parentNode.insertBefore(atNode,objParent);//Inserte the offending element in front of the original <mrow>
+		}
+		else
+		{
+			atNode=objParent;
+		}
+		if (newNode.childElementCount>0) 
+		{
+			objParent.parentNode.insertBefore(newNode,atNode);//Insert the new <mrow> before the curent <mrow>
+			return newNode;
+		}
+		
+		newNode=null;
+	}
+	return null;
+}
+
+function addLeft(target,template)
+/* template = 
+		{
+			preformatted:true/false,
+			nodedata: if preformatted
+			nodename: mn mi mo mspace msup msub msubsup mfenced,
+			nodeattributes:{style,class,open,close}
+			textdata: ,
+			numberofchildren:# 0 if a simple item,
+			consumetarget: true/false,//needed to specify is the target elemen will be inside the template
+			targetplaceholderindex:#
+			targetplaceholdernode: if preformatted
+		}
+*/
+{
+	if((target)&&(target.parentNode)&&(template.preformatted!=null))// If data is supplied correctly
+	{
+		var targetParent=target.parentNode,emptyContainerCheck=false;
+				
+		if (template.preformatted)
+		{//template is ready for insertion
+		}
+		else
+		{//have to format the nodes
+			switch(template.nodename)
+			{
+			case "mi":
+			case "mn":
+			case "mo":
+				var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					newTextNode = document.createTextNode(template.textdata);
+					
+				if(template.nodeattributes)
+				{
+					for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+
+				if(/empty/.test(targetParent.getAttribute('class')))
+				{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+					emptyContainerCheck=true;
+					
+					targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+				}
+				
+				newNode.appendChild(newTextNode);
+				targetParent.insertBefore(newNode,target);
+				if (emptyContainerCheck)
+				{
+					mathBlinkSetUp(newNode,"right",null);
+				}
+				break;
+			case "msup":
+				if((template.consumetarget)&&(template.consumetarget==true))
+				{	
+					//Treat target as a simple element. If it is not, then prosessKeyUp will wrap it in greyed out parenthesis if needed. We have to analyze the container, in case we need to break it apart.
+					//We need to make sure we are not in some sort of container <mrow>
+					if(/selectable/.test(targetParent.getAttribute('class')))
+					{//Everything is fine. Just insert the template.
+						var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+							base=document.createElementNS(mathMLnamespace,"mrow"),exponent=createEmptyElement();
+						
+						base.setAttribute('class',targetParent.getAttribute('class').replace(/\s*selected\s*/," "));
+						
+						if(/empty/.test(targetParent.getAttribute('class')))
+						{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+							emptyContainerCheck=true;
+							
+							targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+						}
+						
+						newNode.appendChild(base);
+						newNode.appendChild(exponent);
+
+						targetParent.insertBefore(newNode,target);
+						
+						newNode.firstElementChild.appendChild(target);
+						
+						mathBlinkSetUp(exponent.firstElementChild,"left",exponent);							
+					}
+					else
+					{//Break the row and inset the template after the first piece
+						if(target.nextElementSibling)
+						{//Not the last element of the row
+							addLeft(breakMRow(target.nextElementSibling,false),template);
+						}
+						else
+						{//Last element of the row
+							addLeft(targetParent,template);
+						}
+					}
+				}
+				else
+				{// Insert a template with two empty placeholders
+					var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					base=createEmptyElement(),exponent=createEmptyElement();
+					
+					newNode.appendChild(base);
+					newNode.appendChild(exponent);
+					
+					targetParent.insertBefore(newNode,target);
+					mathBlinkSetUp(base.firstElementChild,"left",base);
+				}
+				
+				break;
+			case "mfrac":
+				if((template.consumetarget)&&(template.consumetarget==true))
+				{	
+					//Just shove the target item into the numerator
+					//We need to make sure we are not in some sort of container <mrow>
+					if(/selectable/.test(targetParent.getAttribute('class')))
+					{//Everything is fine. Just insert the template.
+						var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+							numerator=document.createElementNS(mathMLnamespace,"mrow"),denominator=createEmptyElement();
+						
+						numerator.setAttribute('class',targetParent.getAttribute('class').replace(/\s*selected\s*/," "));
+						
+						if(/empty/.test(targetParent.getAttribute('class')))
+						{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+							emptyContainerCheck=true;
+							
+							targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+						}
+						
+						newNode.appendChild(numerator);
+						newNode.appendChild(denominator);
+
+						targetParent.insertBefore(newNode,target);
+						
+						numerator.appendChild(target);
+						
+						mathBlinkSetUp(denominator.firstElementChild,"left",denominator);							
+					}
+					else
+					{//Break the row and inset the template after the first piece
+						if(target.nextElementSibling)
+						{//Not the last element of the row
+							addLeft(breakMRow(target.nextElementSibling,false),template);
+						}
+						else
+						{//Last element of the row
+							addLeft(targetParent,template);
+						}
+					}
+				}
+				else
+				{// Insert a template with two empty placeholders
+					var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					numerator=createEmptyElement(),denominator=createEmptyElement();
+					
+					newNode.appendChild(numerator);
+					newNode.appendChild(denominator);
+					
+					targetParent.insertBefore(newNode,target);
+					mathBlinkSetUp(numerator.firstElementChild,"left",numerator);
+				}
+				
+				break;
+			case "mspace":
+				var newNode=document.createElementNS(mathMLnamespace,template.nodename);
+				
+				if(template.nodeattributes)
+				{
+				for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+				
+				if (!(/empty/.test(targetParent.getAttribute('class'))))
+				{//We are adding stuff to a non-empty placeholder
+					targetParent.insertBefore(newNode,target);
+				}
+				break;
+			case "mfenced":
+				var newNode=document.createElementNS(mathMLnamespace,"mfenced"), //Create a set of objects that will represent an empty placeholder
+					inside=createEmptyElement();
+
+				if(/empty/.test(targetParent.getAttribute('class')))
+				{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+					emptyContainerCheck=true;
+					
+					targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+				}
+				if(template.nodeattributes)
+				{
+					for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+				
+				newNode.appendChild(inside);
+				targetParent.insertBefore(newNode,target);
+				mathBlinkSetUp(inside.firstElementChild,"left",inside);	
+				break;
+			}
+		}
+		
+		if (emptyContainerCheck)
+		{
+			removeEmptyElement(targetParent);
+		}
+	}
+}
+
+function addRight(target,template)
+/* template = 
+		{
+			preformatted:true/false,
+			nodedata: if preformatted
+			nodename: mn mi mo mspace msup msub msubsup mfenced,
+			nodeattributes:{style,class,open,close}
+			textdata: ,
+			numberofchildren:# 0 if a simple item,
+			consumetarget: true/false,//needed to specify is the target elemen will be inside the template
+			targetplaceholderindex:#
+			targetplaceholdernode: if preformatted
+		}
+*/
+{
+	if((target)&&(target.parentNode)&&(template.preformatted!=null))// If data is supplied correctly
+	{
+		var targetParent=target.parentNode,emptyContainerCheck=false;
+				
+		if (template.preformatted)
+		{//template is ready for insertion
+		}
+		else
+		{//have to format the nodes
+			switch(template.nodename)
+			{
+			case "mi":
+			case "mn":
+			case "mo":
+				var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					newTextNode = document.createTextNode(template.textdata);
+					
+				if(template.nodeattributes)
+				{
+					for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+
+				if(/empty/.test(targetParent.getAttribute('class')))
+				{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+					emptyContainerCheck=true;
+					
+					targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+				}
+				
+				newNode.appendChild(newTextNode);
+				if (target.nextElementSibling)
+				{
+					targetParent.insertBefore(newNode,target.nextElementSibling);
+				}
+				else
+				{
+					targetParent.appendChild(newNode);
+				}
+				mathBlinkSetUp(newNode,"right",null);
+				break;
+			case "msup":
+				if((template.consumetarget)&&(template.consumetarget==true))
+				{	
+					//Treat target as a simple element. If it is not, then prosessKeyUp will wrap it in greyed out parenthesis if needed. We have to analyze the container, in case we need to break it apart.
+					//We need to make sure we are not in some sort of container <mrow>
+					if(/selectable/.test(targetParent.getAttribute('class')))
+					{//Everything is fine. Just insert the template.
+						var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+							base=document.createElementNS(mathMLnamespace,"mrow"),exponent=createEmptyElement();
+						
+						base.setAttribute('class',targetParent.getAttribute('class').replace(/\s*selected\s*/," "));
+						
+						if(/empty/.test(targetParent.getAttribute('class')))
+						{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+							emptyContainerCheck=true;
+							
+							targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+						}
+						
+						newNode.appendChild(base);
+						newNode.appendChild(exponent);
+
+						targetParent.insertBefore(newNode,target);
+						
+						newNode.firstElementChild.appendChild(target);
+						
+						mathBlinkSetUp(exponent.firstElementChild,"left",exponent);							
+					}
+					else
+					{//Break the row and inset the template after the first piece
+						if(target.nextElementSibling)
+						{//Not the last element of the row
+							breakMRow(target.nextElementSibling,false);
+							addLeft(targetParent,template);
+						}
+						else
+						{//Last element of the row
+							addLeft(targetParent,template);
+						}
+					}
+				}
+				else
+				{// Insert a template with two empty placeholders
+					var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					base=createEmptyElement(),exponent=createEmptyElement();
+					
+					newNode.appendChild(base);
+					newNode.appendChild(exponent);
+					
+					if(target.nextElementSibling)
+					{
+						targetParent.insertBefore(newNode,target.nextElementSibling);
+					}
+					else
+					{
+						targetParent.appenChild(newNode);
+					}
+					mathBlinkSetUp(base.firstElementChild,"left",base);
+				}
+				
+				break;
+			case "mfrac":
+				if((template.consumetarget)&&(template.consumetarget==true))
+				{	
+					//Just shove the target item into the numerator
+					//We need to make sure we are not in some sort of container <mrow>
+					if(/selectable/.test(targetParent.getAttribute('class')))
+					{//Everything is fine. Just insert the template.
+						var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+							numerator=document.createElementNS(mathMLnamespace,"mrow"),denominator=createEmptyElement();
+						
+						numerator.setAttribute('class',targetParent.getAttribute('class').replace(/\s*selected\s*/," "));
+						
+						if(/empty/.test(targetParent.getAttribute('class')))
+						{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+							emptyContainerCheck=true;
+							
+							targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+						}
+						
+						newNode.appendChild(numerator);
+						newNode.appendChild(denominator);
+
+						targetParent.insertBefore(newNode,target);
+						
+						numerator.appendChild(target);
+						
+						mathBlinkSetUp(denominator.firstElementChild,"left",denominator);							
+					}
+					else
+					{//Break the row and inset the template after the first piece
+						if(target.nextElementSibling)
+						{//Not the last element of the row
+							addLeft(breakMRow(target.nextElementSibling,false),template);
+						}
+						else
+						{//Last element of the row
+							addLeft(targetParent,template);
+						}
+					}
+				}
+				else
+				{// Insert a template with two empty placeholders
+					var newNode=document.createElementNS(mathMLnamespace,template.nodename),
+					numerator=createEmptyElement(),denominator=createEmptyElement();
+					
+					newNode.appendChild(numerator);
+					newNode.appendChild(denominator);
+					
+					targetParent.insertBefore(newNode,target);
+					mathBlinkSetUp(numerator.firstElementChild,"left",numerator);
+				}
+				
+				break;
+			case "mspace":
+				var newNode=document.createElementNS(mathMLnamespace,template.nodename);
+				
+				if(template.nodeattributes)
+				{
+				for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+				
+				if (!(/empty/.test(targetParent.getAttribute('class'))))
+				{//We are adding stuff to a non-empty placeholder
+					if(target.nextElementSibling)
+					{
+						targetParent.insertBefore(newNode,target.nextElementSibling);
+					}
+					else
+					{
+						targetParent.appendChild(newNode);
+					}
+				}
+				mathBlinkSetUp(newNode,"right",null);
+				break;
+			case "mfenced":
+				var newNode=document.createElementNS(mathMLnamespace,"mfenced"), //Create a set of objects that will represent an empty placeholder
+					inside=createEmptyElement();
+
+				if(/empty/.test(targetParent.getAttribute('class')))
+				{//We are adding stuff to an empty placeholder, process as we usually do, then clean up later
+					emptyContainerCheck=true;
+					
+					targetParent.setAttribute('class',targetParent.getAttribute('class').replace(/\s*empty/,""));
+				}
+				if(template.nodeattributes)
+				{
+					for (var i=0;i<template.nodeattributes.length;i++)
+					{
+						newNode.setAttribute(template.nodeattributes[i][0],template.nodeattributes[i][1]);
+					}
+				}
+				
+				newNode.appendChild(inside);
+				if(target.nextElementSibling)
+				{
+					targetParent.insertBefore(newNode,target.nextElementSibling);
+				}
+				else
+				{
+					targetParent.appendChild(newNode);
+				}
+				mathBlinkSetUp(inside.firstElementChild,"left",inside);	
+				break;
+			}
+		}
+		
+		if (emptyContainerCheck)
+		{
+			removeEmptyElement(targetParent);
+		}
+	}
+}
+
+function focusOutToRight(target) //Object tries to find someone to rely focus to
+{
+	if((target)&&(target.parentNode)&&(target.namespaceURI.indexOf("MathML") > -1))// If data is supplied correctly
+	{
+		mathStopBlinking();
+		var targetParent=target.parentNode,focusReceiver=null,/*This is an object to receive the focus*/
+			receiveside="left"/*on which side the focusReceiver gets the focus, left by default*/,
+			selectedmrow=mathBlinkingObj.selectedMrow;
+		
+		if(target.nextElementSibling!=null)
+		{//There are elements on the right. Rely focus to them
+			focusInFromLeft(target.nextElementSibling,false);
+		}
+		else//There are no elements to the right. We must look further down the tree.
+		{
+			if (/selectable/.test(targetParent.getAttribute('class')))
+			{//We reached the end of the selectable <mrow>, jump out of it
+				if(/greyedout/.test(targetParent.parentNode.getAttribute('class')))
+				{//If the selectable <mrow> is wrapped by greyed out element, look for siblings of greyed out element
+					focusReceiver = findLeveledNextSelectable(targetParent.parentNode);//Find any selectable fields that are on the same branch
+				}
+				else
+				{
+					focusReceiver = findLeveledNextSelectable(targetParent);//Find any selectable fields that are on the same branch
+				}
+				
+				if(focusReceiver!=null)
+				{//We are in the middle of a template that still has places to go
+					focusInFromLeft(focusReceiver,false);
+				}
+				else
+				{//We also ran out of places to go within the template we live in
+					selectedmrow=findParentMRow(targetParent);
+					if (selectedmrow!=null)
+					{//There is life out there, jump out of the template and give it focus on the right
+						focusReceiver=targetParent.parentNode;
+						
+						while ((focusReceiver.nodeName=="mrow")||(/greyedout/.test(focusReceiver.getAttribute('class')))) focusReceiver=focusReceiver.parentNode;
+						receiveside="right";
+						mathBlinkSetUp(focusReceiver,receiveside,selectedmrow);
+					}
+					else
+					{//There is nothing above us. We try to search for other <selectable mrows> further down the tree
+						selectedmrow=findNextSelectable(targetParent);
+						focusInFromLeft(selectedmrow,false);
+					}
+				}
+			} 
+			else //get out of the shell and look again
+			{
+				focusOutToRight(targetParent);
+			}
+		}
+		
+		mathResumeBlinking();
+	}
+}
+
+function focusInFromLeft(target,
+					self /*Does the object try to move focus around itself, or is it its leftSibling? true or false*/
+					)
+//Focus moves to the right
+{
+	if((target)&&(target.parentNode))// If data is supplied correctly
+	{
+		mathStopBlinking();
+		var targetParent=target.parentNode,focusReceiver=null,/*This is an object to receive the focus*/
+			receiveside="left"/*on which side the focusReceiver gets the focus, left by default*/,
+			selectedmrow=mathBlinkingObj.selectedMrow;
+			if (/empty/.test(targetParent.getAttribute('class')))//We are in the empty placeholder move to the next meaningful element
+			{
+				if (self)
+				{//Empty placeholder tries to move focus around itself. We should get out of it and find other target
+					focusOutToRight(target);
+				}
+				else
+				{//Empty placeholder receives focus from someone on the left
+					selectedmrow=targetParent;
+					focusReceiver=selectedmrow.firstElementChild;
+				}
+			}
+			else//We are in the nonempty container
+			{
+				if ((self)&&(self==true)) //The object tries to shuffle focus around itself
+				{
+					if ((target.childElementCount>0)&&(!(/single/.test(target.getAttribute('class')))))
+					{//Composite element. Move inside
+						if (/selectable/.test(target.firstElementChild.getAttribute('class')))
+						{//Element contains its own input fields
+							selectedmrow=target.firstElementChild;
+							focusReceiver=selectedmrow.firstElementChild;
+						}
+						else if (/greyedout/.test(target.firstElementChild.getAttribute('class')))
+						{//Element has a complicated structure, let it deal with it
+							focusInFromLeft(target.firstElementChild,false);
+						}
+						else
+						{//Element has a complicated structure, let it deal with it
+							focusInFromLeft(target.firstElementChild,false);
+						}
+					}
+					else //Simple element
+					{
+						if (/greyedout/.test(target.getAttribute('class')))
+						{
+							if(target.nextElementSibling!=null)
+							{
+								focusReceiver=target.nextElementSibling
+							}
+							else focusOutToRight(target);
+						}
+						else
+						{
+							focusReceiver=target;
+							receiveside="right";
+						}
+					}
+				}
+				else //Someone from the left tries to rely focus to us
+				{
+					if ((target.childElementCount>0)&&(!(/single/.test(target.getAttribute('class')))))
+					{//Composite element. Move inside
+						if (/selectable/.test(target.getAttribute('class')))
+						{//Element contains its own input fields
+							selectedmrow=target;
+							focusReceiver=selectedmrow.firstElementChild;
+						}
+						else if (/greyedout/.test(target.getAttribute('class')))
+						{//Element has a complicated structure, let it deal with it
+							focusInFromLeft(target.firstElementChild,false);
+						}
+						else
+						{//We move focus to the first child
+							focusInFromLeft(target.firstElementChild,false);
+						}
+					}
+					else
+					{
+						if (/greyedout/.test(target.getAttribute('class')))
+						{
+							if(target.nextElementSibling!=null)
+							{
+								focusReceiver=target.nextElementSibling
+							}
+							else focusOutToRight(target);
+						}
+						else
+						{
+							focusReceiver=target;
+							receiveside="right";
+						}
+					}
+				}
+			}
+		if (focusReceiver!=null)
+		{
+			mathBlinkSetUp(focusReceiver,receiveside,selectedmrow);
+		}
+		else
+		{
+			mathResumeBlinking();
+		}
+	}
+}
+
+function focusOutToLeft(target) //Object tries to find someone to rely focus to
+{
+	if((target)&&(target.parentNode))// If data is supplied correctly
+	{
+		mathStopBlinking();
+		var targetParent=target.parentNode,focusReceiver=null,/*This is an object to receive the focus*/
+			receiveside="right"/*on which side the focusReceiver gets the focus, right by default*/,
+			selectedmrow=mathBlinkingObj.selectedMrow;
+		
+		if(target.previousElementSibling!=null)
+		{//There are elements on the left. Rely focus to them
+			focusInFromRight(target.previousElementSibling,false);
+		}
+		else
+		{//There are no elements to the left. We must look further up the tree.
+			if (/selectable/.test(targetParent.getAttribute('class')))
+			{//We reached the begining of the selectable <mrow>, jump out of it
+				if(/greyedout/.test(targetParent.parentNode.getAttribute('class')))
+				{//If the selectable <mrow> is wrapped by greyed out element, look for siblings of greyed out element
+					focusReceiver = findLeveledPreviousSelectable(targetParent.parentNode);//Find any selectable fields that are on the same branch
+				}
+				else
+				{
+					focusReceiver = findLeveledPreviousSelectable(targetParent);//Find any selectable fields that are on the same branch
+				}
+				
+				if(focusReceiver!=null)
+				{//We are in the middle of a template that still has places to go
+					focusInFromRight(focusReceiver,false);
+				}
+				else
+				{//We also ran out of places to go within the template we live in
+					selectedmrow=findParentMRow(targetParent);
+					if (selectedmrow!=null)
+					{//There is life out there, jump out of the template and give it focus on the right
+						focusReceiver=targetParent.parentNode;
+						
+						while ((focusReceiver.nodeName=="mrow")||(/greyedout/.test(focusReceiver.getAttribute('class')))) focusReceiver=focusReceiver.parentNode;
+						receiveside="left";
+						mathBlinkSetUp(focusReceiver,receiveside,selectedmrow);
+					}
+					else
+					{//There is nothing above us. We try to search for other <selectable mrows> further up the tree
+						selectedmrow=findPreviousSelectable(targetParent);
+						focusInFromRight(selectedmrow,false);
+					}
+				}
+			}
+			else //get out of the shell and look again
+			{
+				focusOutToLeft(targetParent);
+			}
+		}
+		mathResumeBlinking();
+	}
+}
+
+function focusInFromRight(target,
+					self /*Does the object try to move focus around itself, or is it its rightSibling? true or false*/
+					)
+//Focus moves to the left
+{
+	if((target)&&(target.parentNode))// If data is supplied correctly
+	{
+		mathStopBlinking();
+		var targetParent=target.parentNode,focusReceiver=null,/*This is an object to receive the focus*/
+			receiveside="right"/*on which side the focusReceiver gets the focus, right by default*/,
+			selectedmrow=mathBlinkingObj.selectedMrow;
+			if (/empty/.test(targetParent.getAttribute('class')))//We are in the empty placeholder move to the previous meaningful element
+			{
+				if (self)
+				{//Empty placeholder tries to move focus around itself. We should get out of it and find other target
+					focusOutToLeft(target);
+				}
+				else
+				{//Empty placeholder receives focus from someone on the right
+					selectedmrow=targetParent;
+					focusReceiver=selectedmrow.lastElementChild;
+				}
+			}
+			else//We are in the nonempty container
+			{
+				if ((self)&&(self==true)) //The object tries to shuffle focus around itself
+				{
+					if ((target.childElementCount>0)&&(!(/single/.test(target.getAttribute('class')))))
+					{//Composite element. Move inside
+						if (/selectable/.test(target.lastElementChild.getAttribute('class')))
+						{//Element contains its own input fields
+							selectedmrow=target.lastElementChild;
+							focusReceiver=selectedmrow.lastElementChild;
+						}
+						else if (/greyedout/.test(target.lastElementChild.getAttribute('class')))
+						{//Element is a greyed out parenthesis item
+							focusInFromRight(target.lastElementChild,false);
+						}
+						else
+						{//Element has a complicated structure, let it deal with it
+							focusInFromRight(target.lastElementChild,false);
+						}
+					}
+					else //Simple element
+					{
+						if (/greyedout/.test(target.getAttribute('class')))
+						{
+							if(target.previousElementSibling!=null)
+							{
+								focusReceiver=target.previousElementSibling
+							}
+							else focusOutToLeft(target);
+						}
+						else
+						{
+							focusReceiver=target;
+							receiveside="left";
+						}
+					}
+				}
+				else //Someone from the left tries to rely focus to us
+				{
+					if ((target.childElementCount>0)&&(!(/single/.test(target.getAttribute('class')))))
+					{//Composite element. Move inside
+						if (/selectable/.test(target.getAttribute('class')))
+						{//Element contains its own input fields
+							selectedmrow=target;
+							focusReceiver=selectedmrow.lastElementChild;
+						}
+						else if (/greyedout/.test(target.getAttribute('class')))
+						{//Element is a greyed out parenthesis item
+							focusInFromRight(target.lastElementChild,false);
+						}
+						else
+						{//We move focus to the last child
+							focusInFromRight(target.lastElementChild,false);
+						}
+					}//Simple element
+					else
+					{
+						if (/greyedout/.test(target.getAttribute('class')))
+						{
+							if(target.previousElementSibling!=null)
+							{
+								focusReceiver=target.previousElementSibling
+							}
+							else focusOutToLeft(target);
+						}
+						else
+						{
+							focusReceiver=target;
+							receiveside="left";
+						}
+					}
+				}
+			}
+		if (focusReceiver!=null)
+		{
+			mathBlinkSetUp(focusReceiver,receiveside,selectedmrow);
+		}
+		else
+		{
+			mathResumeBlinking();
+		}
+	}
+}
+
+function removeLast(target,
+					suicide,/*Does the object tries to delete pieces of itself? true or false*/
+					deleteWhole/*Do we want to delete the whole thing, includeing children? true or false*/
+					)
+{
+	if((target)&&(target.parentNode))// If data is supplied correctly
+	{
+		mathStopBlinking();
+		var targetParent=target.parentNode,batonReceiver=null,/*This is an object to receive the focus in case the focuse object delets itself*/
+			receiveside="left"/*on which side the batonReceiver gets the focus, left by default*/;
+		
+		if (target.previousElementSibling)
+		{
+			batonReceiver=target.previousElementSibling;
+			receiveside="right";
+		}
+		else if (target.nextElementSibling)
+		{
+			batonReceiver=target.nextElementSibling;
+		}
+		
+		if(/empty/.test(targetParent.getAttribute('class')))
+		{//We are hitting backspace in an empty placeholder, do nothing for now. TODO remove the containing template if there is a higher <selectable mrow>
+		}
+		else
+		{//We delete an object
+			if(true||deleteWhole)//Delet the whole object in one swipe, even if it has children
+			{
+				if (suicide) //Object suicide
+				{//Object has still focus on itself move it to batonReceiver if it exists
+					if (batonReceiver!=null)
+					{
+						mathBlinkSetUp(batonReceiver,receiveside,findParentMRow(batonReceiver));
+					}
+					else
+					{
+						mathBlinkSetUp(null,"",null);
+					}
+					targetParent.removeChild(target);
+				}
+				else
+				{
+					targetParent.removeChild(target);
+				}
+			}
+			else
+			{
+				switch(target.nodeName)
+				{
+				case "mi":
+				case "mn":
+				case "mo":
+					//simple nodes
+					if (suicide) //Object suicide
+					{//Object has still focus on itself move it to batonReceiver if it exists
+						if (batonReceiver!=null)
+						{
+							mathBlinkSetUp(batonReceiver,receiveside,findParentMRow(batonReceiver));
+						}
+						else
+						{
+							mathBlinkSetUp(null,"",null);
+						}
+						targetParent.removeChild(target);
+					}
+					else
+					{
+						targetParent.removeChild(target);
+					}
+					break;
+				case "msup":
+					//Composite node will start deleting its exponent
+					//Don't delete anythig, just move to the exponent
+				}
+			}
+		}
+		
+		if (targetParent.childElementCount<1)
+		{//Container had become empty
+			if (/selectable/.test(targetParent.getAttribute('class')))
+			{
+				insertEmptyElement(targetParent);
+				
+				mathBlinkSetUp(targetParent.firstElementChild,"left",findParentMRow(targetParent.firstElementChild));
+			}
+			else //target's parent is a grouping item. Delete it and move focus to upper elements
+			{
+				var lookUpParent=targetParent,lookUpTarget=targetParent.firstElementChild;
+				
+				while ((lookUpParent.childElementCount<2)&&(!(/selectable/.test(lookUpParent.getAttribute('class')))))
+				{
+					if(lookUpTarget!=null) lookUpParent.removeChild(lookUpTarget);
+					lookUpTarget=lookUpParent;
+					lookUpParent=lookUpParent.parentNode;
+				}
+				
+				batonReceiver=null;
+				receiveside="left";
+				
+				if (lookUpParent.childElementCount>1)
+				{
+					if (lookUpTarget.previousElementSibling)
+					{
+						batonReceiver=lookUpTarget.previousElementSibling;
+						receiveside="right";
+					}
+					else if (lookUpTarget.nextElementSibling)
+					{
+						batonReceiver=lookUpTarget.nextElementSibling;
+					}
+				}
+				
+				lookUpParent.removeChild(lookUpTarget);
+				
+				if(batonReceiver==null)
+				{
+					insertEmptyElement(lookUpParent);
+					
+					batonReceiver=lookUpParent.firstElementChild;
+				}
+				mathBlinkSetUp(batonReceiver,receiveside,findParentMRow(batonReceiver));
+			}
+		}
+		mathResumeBlinking();
+	}
+}
+
+
+function processKeyPress(evt)
+//This function inserts new elements if character data is produced and a keypress event is generated
+{
+	if((mathBlinkingOn)&&(mathBlinkingObj.obj!=null)) //If there is a clicked math object
+	{
+		if ((mathBlinkingObj.obj.namespaceURI.indexOf("MathML") > -1)&&(mathBlinkingObj.obj.parentNode.nodeName=="mrow"))//Just paranoid here
+		//Let's not type anything outside of the MathML object and let's not type anything inside a MathML template token. Otherwise we might break things.
+		{
+			var obj=mathBlinkingObj.obj, 
+				objParent=obj.parentNode, 
+				code=evt.charCode,//which button was pressed
+				emptyContainerCheck=false;//If this is true, then we just altered an empty placeholder
+			
+			if(!((evt.ctrlKey)||(evt.altKey)||(evt.metaKey)))//Let the browsers deal with keystrokes
+			{
+				var targetSibling=obj, //This is the object that has cursor
+					charIn=String.fromCharCode(code);
+					
+				if (code==32)
+				{
+					if (!(/empty/.test(objParent.getAttribute('class'))))//Do nothing if there is nothing to get away from
+					{//Space pressed inside something nonempty
+						var template = {preformatted:false,nodename:"mspace",textdata:charIn,nodeattributes:[["width","mediummathspace"]]};
+						if (mathBlinkingObj.side=="left") //new shildren must be added to the left of selected object
+						{
+							addLeft(targetSibling,template);
+						}
+						else //new children must be added to the right of selected object
+						{
+							addRight(targetSibling,template);
+						}
+					}
+				}
+				else if (/([A-Z]|[a-z])/.test(charIn)) //Letters will be typeset as math identifiers
+				{
+					var template = {preformatted:false,nodename:"mi",textdata:charIn};
+					if (mathBlinkingObj.side==="left") //new shildren must be added to the left of selected object
+					{
+						addLeft(targetSibling,template)
+					}
+					else //new children must be added to the right of selected object
+					{
+						addRight(targetSibling,template)
+					}
+				}
+				else if (/\d|\./.test(charIn)) //Digits create rows of math numbers, dot is a digit
+				{
+					var template;
+					if (/\./.test(charIn))
+					{
+						template = {preformatted:false,nodename:"mn",textdata:charIn,nodeattributes:[["class","decimaldot"]]};
+					}
+					else
+					{
+						template = {preformatted:false,nodename:"mn",textdata:charIn};
+					}
+					
+					if (mathBlinkingObj.side==="left")
+					{
+						addLeft(targetSibling,template);
+					}
+					else
+					{
+						addRight(targetSibling,template);
+					}
+				}
+				else if (/[\+\-\*\/\^\_\=]/.test(charIn)) // [+] [-] [*] [/] [^] [_] [=] are creating operations
+				{
+					var template;
+					
+					switch(charIn)
+					{
+					case "*":
+						charIn=String.fromCharCode(0xB7);
+					case "+":
+					case "-":
+					case "=":
+						// Simple <mo> node for these
+						template = {preformatted:false,nodename:"mo",textdata:charIn};
+						
+						if (mathBlinkingObj.side==="left")
+						{
+							addLeft(targetSibling,template);
+						}
+						else
+						{
+							addRight(targetSibling,template);
+						}
+						
+						break;
+					case "^":
+						// Add an <msup> element. If there is anything to the left of the cursor, it will be raised to the power, otherwise an empty template will be inserted
+						var baseExists=false,baseNode=null;;
+						
+						mathStopBlinking();//Stop blinking
+						
+						if (!(/empty/.test(objParent.getAttribute('class'))))//Don't do anything if there is nothing to be raised to the power
+						{
+							if (mathBlinkingObj.side==="right")
+							{
+								if ((targetSibling.nodeType==1))
+								{
+									baseExists=true;
+								
+									baseNode=targetSibling;
+								}
+							}
+							else
+							{
+								var previousTargetSibling=obj.previousElementSibling;
+								if (previousTargetSibling!=null)
+								{
+									if ((previousTargetSibling.nodeType==1))
+									{
+										baseExists=true;
+								
+										baseNode=previousTargetSibling;
+										
+										targetSibling=previousTargetSibling;
+									}
+								}
+							}
+						}
+						else
+						{
+							baseNode = objParent.firstElementChild;
+							if (baseNode!=null) baseExists=true;
+						}
+						if (baseExists) //There is the base that will be raised to the power
+						{
+							template = {preformatted:false,nodename:"msup",consumetarget:true};
+
+							addLeft(baseNode,template);
+						}
+						else
+						{
+							template = {preformatted:false,nodename:"msup",consumetarget:false};
+							
+							baseNode=targetSibling;
+							
+							addLeft(baseNode,template);
+						}
+						mathResumeBlinking();
+						break;
+					case "/":
+						// Add an <mfrac> element. If there is anything to the left of the cursor, it will be put into the numerator, otherwise an empty template will be inserted
+						var numeratorExists=false,numeratorNode=null;
+						
+						mathStopBlinking();//Stop blinking
+						
+						if (!(/empty/.test(objParent.getAttribute('class'))))//Empty containers receive special treatment
+						{
+							if (mathBlinkingObj.side==="right")
+							{
+								if ((targetSibling.nodeType==1))
+								{
+									numeratorExists=true;
+								
+									numeratorNode=targetSibling;
+								}
+							}
+							else
+							{
+								var previousTargetSibling=obj.previousElementSibling;
+								if (previousTargetSibling!=null)
+								{
+									if ((previousTargetSibling.nodeType==1))
+									{
+										numeratorExists=true;
+								
+										numeratorNode=previousTargetSibling;
+										
+										targetSibling=previousTargetSibling;
+									}
+								}
+							}
+						}
+						else
+						{
+							numeratorNode = objParent.firstElementChild;
+							if (numeratorNode!=null) numeratorExists=true;
+						}
+						if (numeratorExists) //There is the a node that can serve as a denominator
+						{
+							template = {preformatted:false,nodename:"mfrac",consumetarget:true};
+
+							addLeft(numeratorNode,template);
+						}
+						else
+						{
+							template = {preformatted:false,nodename:"mfrac",consumetarget:false};
+							
+							numeratorNode=targetSibling;
+							
+							addLeft(numeratorNode,template);
+						}
+						mathResumeBlinking();
+						break;
+					}
+				}
+				else if (/[\[\(\{\|]/.test(charIn))
+				{
+					var template;
+					if (/empty/.test(objParent.getAttribute('class')))
+					{
+						emptyContainerCheck=true;
+						
+						objParent.setAttribute('class',objParent.getAttribute('class').replace(/\s*empty/,""));
+					}
+					var newNode=document.createElementNS(mathMLnamespace,"mfenced"), //Create a set of objects that will represent an empty placeholder
+						newMRow=document.createElementNS(mathMLnamespace,"mrow"),
+						newMPhantom=document.createElementNS(mathMLnamespace,"mphantom"),
+						newTextNode = document.createTextNode("X");
+					
+					if(/[\(]/.test(charIn))//left parenthesis pressed
+					{
+						template = {preformatted:false,nodename:"mfenced",textdata:charIn,nodeattributes:[["open","("],['close',")"]]}
+					}
+					else if(/[\[]/.test(charIn))//left bracket pressed
+					{
+						template = {preformatted:false,nodename:"mfenced",textdata:charIn,nodeattributes:[["open","["],['close',"]"]]}
+					}
+					else if(/[\{]/.test(charIn))//left curly brace pressed
+					{
+						template = {preformatted:false,nodename:"mfenced",textdata:charIn,nodeattributes:[["open","{"],['close',"}"]]}
+					}
+					else if(/[\|]/.test(charIn))//vertical bar is pressed
+					{
+						template = {preformatted:false,nodename:"mfenced",textdata:charIn,nodeattributes:[["open","|"],['close',"|"]]}
+					}
+					
+					if (mathBlinkingObj.side==="left")
+					{
+						addLeft(targetSibling,template);
+					}
+					else
+					{
+						addRight(targetSibling,template);
+					}
+				}
+				
+				if (emptyContainerCheck)
+				{
+					var MPhantom=objParent.firstChild;
+					while (MPhantom.nodeName!="mphantom") MPhantom=MPhantom.nextSibling;
+					
+					objParent.removeChild(MPhantom);
+				}
+
+				if (evt. preventDefault) evt.preventDefault();
+			}
+		}
+	}
+}
+
+function clickListener(evt)
+{
+	if (evt.target.namespaceURI.indexOf("MathML") == -1)//User clicked on a non-math object
+	{
+		if (mathBlinkingOn)
+		{
+			mathBlinkSetUp(null,"",mathBlinkingObj.selectedMrow);//Stop blinking if a user clicked on a non-math object
+		}
+	}
+
+}
+
+function mathBlinkSetUp(obj,side,selectedmrow) 
+//Here we set up a blinking current typing position cursor and highlight the mrow-element that is going to receive the newly typed elements
+{	
+	if (mathBlinkingOn)
+	{
+		try {clearTimeout( mathBlinkingTimer );} catch(e){};
+		
+		if (mathBlinkingObj.obj!=null)
+		{
+			var stylestring = mathBlinkingObj.obj.getAttribute('style');
+			if (stylestring===null) stylestring="";
+			
+			mathBlinkingObj.obj.setAttribute('style',stylestring.replace(/border-.*[^;];/,""));
+		}
+		if (selectedmrow!=null)
+		{
+			try {mathBlinkingObj.selectedMrow.setAttribute('class',mathBlinkingObj.selectedMrow.getAttribute('class').replace(/\s*selected/,""));}catch(e){};
+			mathBlinkingObj.selectedMrow=null;
+		}
+
+	}
+	if (obj!=null)
+	{
+		if (obj.nodeName=="mrow")
+		{
+			if(side=="left")
+			{
+				mathBlinkSetUp(obj.firstElementChild,side,null)
+			}
+			else
+			{
+				mathBlinkSetUp(obj.lastElementChild,side,null)
+			}
+		}
+		else
+		{
+			mathBlinkingObj.obj=obj;
+			mathBlinkingObj.side=side;
+		}
+		mathBlinkingOn=true;
+
+		if(selectedmrow!=null) 
+		{
+			mathBlinkingObj.selectedMrow=selectedmrow;
+			
+			if (selectedmrow.getAttribute('class')!=null)
+			{
+				selectedmrow.setAttribute('class',selectedmrow.getAttribute('class')+" selected");
+			}
+			else
+			{
+				selectedmrow.setAttribute('class',"selected");
+			}
+		}
+		
+		mathBlinkingTimer=setTimeout(mathBlinkingCursorOn,20);
+	}
+	else
+	{
+		mathBlinkingOn=false;
+
+		mathBlinkingObj.obj=null;
+		mathBlinkingObj.side="";
+		
+		if(mathBlinkingObj.selectedMrow!=null) 
+		{
+			mathBlinkingObj.selectedMrow.setAttribute('class',mathBlinkingObj.selectedMrow.getAttribute('class').replace(/\s*selected/,""));
+			mathBlinkingObj.selectedMrow=null;
+		}
+	}
+}
+
+function mathStopBlinking()
+{
+	try {clearTimeout( mathBlinkingTimer );} catch(e){};
+}
+
+function mathResumeBlinking()
+{
+	try {clearTimeout( mathBlinkingTimer );} catch(e){};
+	if ((mathBlinkingOn)&&(mathBlinkingObj.obj!=null))
+	{
+		var stylestring = mathBlinkingObj.obj.getAttribute('style');
+		
+		if (stylestring===null) stylestring="";
+	
+		stylestring=stylestring.replace(/border-.*[^;];/,"")+"border-"+mathBlinkingObj.side+": 1px solid black ;";
+		mathBlinkingObj.obj.setAttribute('style',stylestring);
+		mathBlinkingTimer=setTimeout(mathBlinkingCursorOff,500);//Hide the border after half a second
+	}
+}
+
+function mathBlinkingCursorOn()//Blinking cursor is emulated by blinking either the left or the right border of the math item
+{
+	try {clearTimeout( mathBlinkingTimer );} catch(e){};
+	if (mathBlinkingObj.obj!=null)
+	{
+		var stylestring = mathBlinkingObj.obj.getAttribute('style');
+		
+		if (stylestring===null) stylestring="";
+	
+		stylestring=stylestring.replace(/border-.*[^;];/,"")+"border-"+mathBlinkingObj.side+": 1px solid black ;";
+		mathBlinkingObj.obj.setAttribute('style',stylestring);
+		mathBlinkingTimer=setTimeout(mathBlinkingCursorOff,500);//Hide the border after half a second
+	}
+}
+
+function mathBlinkingCursorOff()
+{
+	try {clearTimeout( mathBlinkingTimer );} catch(e){};
+	if (mathBlinkingObj.obj!=null)
+	{
+		var stylestring = mathBlinkingObj.obj.getAttribute('style');
+		
+		if(stylestring!=null)
+		{
+			stylestring=stylestring.replace(/border-.*[^;];/,"");
+			mathBlinkingObj.obj.setAttribute('style',stylestring);
+		}
+		mathBlinkingTimer=setTimeout(mathBlinkingCursorOn,500);//Show the current typing position cursor after half a second
+	}
+}
+//]]>
+</script>
+</head>
+
+<body onload="setupEventListeners()">
+<div class="testpage">
+<p class="menu"><a>1206</a>:<a>Test 4</a> <a class="aleft">Logout</a></p>
+<div class="problem">
+<div class="divproblemstatementheading"> <h3>Test 4, Problem 3</h3>
+</div>
+<div class="divproblemstatement">
+A lamina of density 
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+  <mi>&#x03B4;<!-- δ --></mi>
+  <mo>=</mo>
+  <mn>.75</mn>
+  <mtext>&#xA0;</mtext>
+  <mfrac>
+    <mtext>kg</mtext>
+    <msup>
+      <mtext>m</mtext>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+</math> is bounded by the graphs of functions:
+<p class="mathformula">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>f</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mn>4</mn>
+  </mfrac>
+</math>
+ and 
+ <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>g</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mfrac>
+    <mi>x</mi>
+    <mn>2</mn>
+  </mfrac>
+</math>
+(see the picture below)</p>
+<object type="image/svg+xml" name="omap" data="pics/problem1.svgz" height="300px"><table align="center" border="2"><tr><td align="center">You should see a maps within an &lt;object&gt;-tag here<br><br><b>YOUR BROWSER DOESN'T SUPPORT EMBEDED HTML-OBJECTS.<br><br>Please update!</b></td></tr></table></object></div>
+</div>
+<div class="questions">
+<div class="diveditorheading" id="diveditor1"><h3>Question 1</h3>
+</div>
+<div class="diveditor" id="diveditor1">
+Set up an integral formula to compute the moment of the lamina around x-axis:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="editablemath answerform">
+	<mrow>
+		<msub>
+			<mi>M</mi>
+			<mi>x</mi>
+		</msub>
+		<mo>=</mo>
+		<msubsup>
+			<mo>&#x222B;<!-- ∫ --></mo>
+			<mrow class="unmovable selectable empty"><mphantom>X</mphantom></mrow>
+			<mrow class="unmovable selectable empty"><mphantom>X</mphantom></mrow>
+		</msubsup>
+		<mrow class="unmovable selectable empty">
+			<mphantom>X</mphantom>
+		</mrow>
+		<mspace width="thinmathspace" />
+		<mi>d</mi>
+		<mrow class = "unmovable selectable empty">
+			<mphantom>X</mphantom>
+		</mrow>
+	</mrow>
+</math>
+</div>
+
+<div class="diveditorheading" id="diveditor1"><h3>Question 2</h3></div>
+<div class="diveditor" id="diveditor1">
+Set up an integral formula to compute the moment of the lamina around y-axis:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" class="editablemath answerform">
+	<mrow>
+		<msub>
+			<mi>M</mi>
+			<mi>y</mi>
+		</msub>
+		<mo>=</mo>
+		<msubsup>
+			<mo>&#x222B;<!-- ∫ --></mo>
+			<mrow class="unmovable selectable empty"><mphantom>X</mphantom></mrow>
+			<mrow class="unmovable selectable empty"><mphantom>X</mphantom></mrow>
+		</msubsup>
+		<mrow class="unmovable selectable empty">
+			<mphantom>X</mphantom>
+		</mrow>
+		<mspace width="thinmathspace" />
+		<mi>d</mi>
+		<mrow class = "unmovable selectable empty">
+			<mphantom>X</mphantom>
+		</mrow>
+	</mrow>
+</math>
+</div>
+
+</div>
+</div>
+
+<div id="help">
+<h3>User's Manual</h3>
+<p>
+Key combinations that work:
+<ul>
+<li>Left-click on the parts of the equation to start typing</li>
+<li><span class="boxed">A</span> - <span class="boxed">Z</span> letters and digits work as they usually do</li>
+<li>Arithmetic operations <span class="boxed">+</span>, <span class="boxed">-</span>, <span class="boxed">*</span> (<span class="boxed">Shift</span> + <span class="boxed">8</span>), <span class="boxed">/</span> and <span class="boxed">^</span> (<span class="boxed">Shift</span> + <span class="boxed">6</span>) are recognized</li>
+<li><span class="boxed">Space</span> creates white spaces. Use it to break numbers and symbol sequences apart.</li>
+<li><span class="boxed">(</span>, <span class="boxed">[</span>, <span class="boxed">{</span>, <span class="boxed">|</span> buttons create matched delimiters </li>
+<li>Backspace erases an item to the left of the cursor, if there is anything in the container template.</li>
+<li>Left and right arrow keys navigate around the equation</li>
+</ul>
+The output looks nicer if you have STIX fonts installed (available for free from <a href="http://www.stixfonts.org/">STIX fonts web-site</a>).<br />
+Equation editor tries to format the equation so that it is visually unambiguous. It wraps parts of the equation in grayed out parenthesis or adds grayed out cross to indicate multiplication if the rendering results might be interpreted ambiguously.
+</p>
+</div>
+</body>
+</html>
