@@ -1,3 +1,6 @@
+This project is abandoned in favor of MathJax editor due to extremely poor support of MathML by web browsers. 
+Also, Firefox (the only browser where this worked) introduced some changes in v20 that broke this code.
+
 webMathEditor is a javascript addon, that enables seamless interactivity of MathML markup. 
 
 Features:
