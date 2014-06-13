@@ -5,7 +5,7 @@ webMathEditor is a javascript addon, that enables seamless interactivity of Math
 
 Features:
 1) Recognizing mouseclicks and rendering a mockup of a blinking cursor
-2) Accepting typed input: space letters, simple arithmetic operations ([+]/[-]/[*]/[/]/[^])
+2) Accepting typed input: space, letters, simple arithmetic operations ([+]/[-]/[*]/[/]/[^])
 3) Backspace erases complete templates
 4) Keyborad navigation with left and right arrow keys
 
